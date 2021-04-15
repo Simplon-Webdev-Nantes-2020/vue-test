@@ -3,16 +3,16 @@ import Task from "../../src/components/task.vue";
 
 describe("Task.vue", () => {
     it("renders correctly", () => {
-        const text = "It works !";
+        const name = "It works !";
 
         const wrapper = shallowMount(Task, {
             propsData: {
-                text,
+                name,
                 done: true,
             },
         });
 
-        expect(wrapper.text()).toMatch(text);
+        expect(wrapper.text()).toMatch(name);
         expect(wrapper.find("input").element.value).toBe("on");
     });
 });

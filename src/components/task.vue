@@ -1,7 +1,7 @@
 <template>
     <li :class="{done}">
         <input type="checkbox" v-model="done" :id="slug">
-        <label :for="slug">{{ text }}</label>
+        <label :for="slug">{{ name }}</label>
         <button @click="remove">❌</button>
     </li>
 </template>
@@ -11,7 +11,7 @@ import slugify from "../utils/slugify.js";
 
 export default {
     name: "task",
-    props: ["text", "done"],
+    props: ["name", "done"],
     methods: {
         remove () {
             this.$emit("removeTask");
@@ -19,7 +19,7 @@ export default {
     },
     computed: {
         slug () {
-            return slugify(this.text);
+            return slugify(this.name);
         }
     }
 };

@@ -2,8 +2,8 @@
     <div>
         <ul>
             <Task
-                v-for="({ text, done }, index) in list" :key="index"
-                :text="text" :done="done"
+                v-for="({ name, done }, index) in list" :key="index"
+                :name="name" :done="done"
                 @removeTask="removeTask(index)"
             />
         </ul>

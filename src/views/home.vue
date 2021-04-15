@@ -20,22 +20,22 @@ export default {
         return {
             tasks: [
                 {
-                    text: "Apprendre Vue",
+                    name: "Apprendre Vue",
                     done: true,
                 },
                 {
-                    text: "Apprendre les TU"
+                    name: "Apprendre les TU"
                 },
                 {
-                    text: "Become famous !"
+                    name: "Become famous !"
                 },
             ],
         };
     },
     methods: {
-        addTask (text) {
+        addTask (name) {
             this.tasks.push({
-                text,
+                name,
             });
         },
         removeTask (index) {
